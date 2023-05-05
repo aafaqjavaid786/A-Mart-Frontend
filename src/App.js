@@ -22,7 +22,7 @@ import OrderListScreen from './screens/OrderListScreen';
 
 
 function App() {
-  console.log(process.env.REACT_APP_ENV)
+  // console.log(process.env.REACT_APP_ENV)
   return (
     <Router>
       <Header />
