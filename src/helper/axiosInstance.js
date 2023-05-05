@@ -13,7 +13,7 @@ const axiosInstance = () => {
                 : `${process.env.REACT_APP_MAIN_SERVER_URL_DEVELOPMENT}`,
         timeout: 99999999999999999999,
         headers: {
-            Authorization: userInfo ? `Bearer ${userInfo?.token}` : null,
+            Authorization: userInfo ? `Bearer ${userInfo.token}` : null,
             "Content-Type": "application/json",
             accept: "application/json",
         },
