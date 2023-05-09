@@ -1,6 +1,8 @@
 import axios from "axios"
 
 const axiosInstance = () => {
+    console.log("localhost")
+
     const userInfo = localStorage.getItem("userInfo")
         ? JSON.parse(localStorage.getItem("userInfo"))
         : null
