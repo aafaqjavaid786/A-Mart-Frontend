@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-// import axios from 'axios'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Form, Button, } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,6 +8,7 @@ import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 import axios from 'axios'
+import axiosInstance from '../helper/axiosInstance'
 
 function ProductEditScreen() {
     const {id} = useParams()
@@ -88,7 +88,7 @@ function ProductEditScreen() {
           }
         }
 
-        const {data} = await axios.post('/api/products/upload/', formData, config)
+        const {data} = await axiosInstance().post('/api/products/upload/', formData, config)
 
         setImage(data)
         setUploading(false)
