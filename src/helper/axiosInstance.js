@@ -2,6 +2,8 @@ import axios from "axios"
 
 const axiosInstance = () => {
 
+    console.log(`${process.env.REACT_APP_ENV}`)
+
     process.env.REACT_APP_ENV === "production"
       ? console.log(`${process.env.REACT_APP_MAIN_SERVER_URL_PRODUCTION}`)
       : console.log(`${process.env.REACT_APP_MAIN_SERVER_URL_DEVELOPMENT}`);
