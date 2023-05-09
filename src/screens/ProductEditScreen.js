@@ -71,7 +71,7 @@ function ProductEditScreen() {
       }
 
     const uploadFileHandler = async (e) =>{
-      // console.log('Uploaded')
+      console.log('Uploaded')
       const file = e.target.files[0]
       const formData = new FormData()
 
